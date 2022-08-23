@@ -1,0 +1,116 @@
+.header {
+  padding: 60px 0;
+}
+
+.weather-app {
+  padding: 15px;
+  margin: 30px auto;
+
+  max-width: 600px;
+
+  border: 1px hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px 7px rgb(136 140 133 / 15%);
+}
+
+.current-day {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 40px;
+}
+
+.current-city {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.icon-img {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-img-search {
+  width: 25px;
+}
+
+.center-weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.center-weather-list {
+  padding-top: 20px;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.banner-weather {
+  width: 100%;
+}
+
+.center-icon-img {
+  width: 30px;
+  height: 30px;
+}
+
+.days-weather {
+  padding: 20px 0;
+}
+
+li {
+  list-style: none;
+}
+
+.temperature {
+  font-size: 28px;
+}
+
+div .units a {
+  text-decoration: none;
+}
+
+.probability-prec,
+.pressure {
+  margin: 0;
+  display: block;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 12px;
+}
+
+.center-weather {
+  margin-bottom: 60px;
+}
+
+.next-day {
+  gap: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.next-day-weather {
+  display: block;
+  width: 100%;
+}
+
+.next-day-temperature {
+  padding-bottom: 40px;
+  font-size: 24px;
+}
+
+.next-icon-img {
+  height: 100%;
+}
