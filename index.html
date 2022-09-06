@@ -17,26 +17,30 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="row header">
-          <div class="col current-day">
-            <div class="current-city">
-              <img
-                src="images/current_city.png"
-                alt="icon for current city"
-                class="icon-img"
-              />
-              <h1 class="title city-title" id="current-city">KYIV</h1>
-            </div>
+        <!-- <div class="row header"> -->
 
-            <div class="row">
+        <div class="current-city">
+          <img
+            src="images/current_city.png"
+            alt="icon for current city"
+            class="icon-img"
+          />
+          <h1 class="title city-title" id="current-city">KYIV</h1>
+          <ul>
+            <li class="temperature col" id="temperature">°C</li>
+            <li>Feels like <span id="feels">°C</span></li>
+          </ul>
+        </div>
+
+        <!-- <div class="row">
               <div class="temperature col" id="temperature">°C</div>
-              <!-- <div class="units col"></a>
+              <div class="units col"></a>
             <a href="#" id="farenheit-link">℉</a>
-            </div> -->
+            </div> 
               <p>Feels like <span id="feels">°C</span></p>
-            </div>
-          </div>
+            </div> -->
 
+        <div class="row header">
           <div class="col-auto search-form">
             <form class="row g-2" id="search-form">
               <div class="col-auto">
@@ -125,22 +129,6 @@
             />
             <ul class="days-weather">
               <li class="next-day-temperature">+24 ℃</li>
-              <li class="row">
-                <img
-                  src="images/drops.png"
-                  alt="icon of drops"
-                  class="next-icon-img col-6"
-                />
-                <p class="probability-prec col-6">20 %</p>
-              </li>
-              <li class="row">
-                <img
-                  src="images/windy.png"
-                  alt="icon of wind"
-                  class="next-icon-img col-6"
-                />
-                <p class="pressure col-6">12 km/h</p>
-              </li>
             </ul>
           </div>
           <div class="col shadow-sm p-3 mb-5 bg-body rounded">
@@ -152,22 +140,6 @@
             />
             <ul class="days-weather">
               <li class="next-day-temperature">+22 ℃</li>
-              <li class="row">
-                <img
-                  src="images/drops.png"
-                  alt="icon of drops"
-                  class="next-icon-img col-6"
-                />
-                <p class="probability-prec col-6">28 %</p>
-              </li>
-              <li class="row">
-                <img
-                  src="images/windy.png"
-                  alt="icon of wind"
-                  class="next-icon-img col-6"
-                />
-                <p class="pressure col-6">10 km/h</p>
-              </li>
             </ul>
           </div>
           <div class="col shadow-sm p-3 mb-5 bg-body rounded">
@@ -179,22 +151,6 @@
             />
             <ul class="days-weather">
               <li class="next-day-temperature">+23 ℃</li>
-              <li class="row">
-                <img
-                  src="images/drops.png"
-                  alt="icon of drops"
-                  class="next-icon-img col-6"
-                />
-                <p class="probability-prec col-6">32 %</p>
-              </li>
-              <li class="row">
-                <img
-                  src="images/windy.png"
-                  alt="icon of wind"
-                  class="next-icon-img col-6"
-                />
-                <p class="pressure col-6">8 km/h</p>
-              </li>
             </ul>
           </div>
           <div class="col shadow-sm p-3 mb-5 bg-body rounded">
@@ -206,22 +162,6 @@
             />
             <ul class="days-weather">
               <li class="next-day-temperature">+23 ℃</li>
-              <li class="row">
-                <img
-                  src="images/drops.png"
-                  alt="icon of drops"
-                  class="next-icon-img col-6"
-                />
-                <p class="probability-prec col-6">32 %</p>
-              </li>
-              <li class="row">
-                <img
-                  src="images/windy.png"
-                  alt="icon of wind"
-                  class="next-icon-img col-6"
-                />
-                <p class="pressure col-6">8 km/h</p>
-              </li>
             </ul>
           </div>
           <div class="col shadow-sm p-3 mb-5 bg-body rounded">
@@ -233,28 +173,16 @@
             />
             <ul class="days-weather">
               <li class="next-day-temperature">+18 ℃</li>
-              <li class="row">
-                <img
-                  src="images/drops.png"
-                  alt="icon of drops"
-                  class="next-icon-img col-6"
-                />
-                <p class="probability-prec col-6">50 %</p>
-              </li>
-              <li class="row">
-                <img
-                  src="images/windy.png"
-                  alt="icon of wind"
-                  class="next-icon-img col-6"
-                />
-                <p class="pressure col-6">12 km/h</p>
-              </li>
             </ul>
           </div>
         </div>
       </div>
       <div class="open-source">
-        <a href="https://github.com/KsushkaKov/weather-app" target="_blank">Open-source code</a> by Ksenia Kovalenko</div>
+        <a href="https://github.com/KsushkaKov/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Ksenia Kovalenko
+      </div>
     </div>
     <script src="script/week4.js"></script>
   </body>

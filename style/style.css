@@ -1,13 +1,11 @@
 .header {
-  padding: 60px 0;
+  padding: 5px 40px 20px;
 }
 
 .weather-app {
   padding: 15px;
   margin: 30px auto;
-
   max-width: 600px;
-
   border: 1px hidden;
   border-radius: 12px;
   box-shadow: 0 10px 10px 7px rgb(136 140 133 / 15%);
@@ -18,11 +16,14 @@
   flex-direction: row;
   justify-content: start;
   gap: 40px;
+  
+ 
 }
 
 .current-city {
   display: flex;
   flex-direction: row;
+   margin: 40px 0 0 40px;
 }
 
 .title {
@@ -41,9 +42,12 @@
   width: 25px;
 }
 
+
+
 .center-weather {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 5px 40px;
 }
 
 .center-weather-list {
@@ -107,8 +111,7 @@ div .units a {
 }
 
 .next-day-temperature {
-  padding-bottom: 40px;
-  font-size: 24px;
+    font-size: 18px;
 }
 
 .next-icon-img {
