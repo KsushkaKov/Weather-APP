@@ -30,12 +30,21 @@ function displayWeatherCondition(response) {
   let wind = Math.round(response.data.wind.speed);
   let pressure = response.data.main.pressure;
   let temperature = Math.round(response.data.main.temp);
+  let iconElement = document.querySelector("#icon-today");
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${temperature} ℃`;
   document.querySelector("#humidity").innerHTML = `${humidity}  %`;
   document.querySelector("#wind").innerHTML = `${wind} km/h`;
   document.querySelector("#pressure").innerHTML = `${pressure} hPa`;
   document.querySelector("#feels").innerHTML = `${feels} ℃`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(
+    "alt",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+  );
 }
 
 function searchCity(city) {
