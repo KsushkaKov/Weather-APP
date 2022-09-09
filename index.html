@@ -20,11 +20,24 @@
         <!-- <div class="row header"> -->
 
         <div class="current-city">
-          <img
+          <div class="col-auto">
+            <button
+              type="submit"
+              class="btn btn-link btn-lg current-btn"
+              id="current-location-button"
+            >
+              <img
+                src="images/current_city.png"
+                alt="icon for current city"
+                class="icon-img-search"
+              />
+            </button>
+          </div>
+          <!-- <img
             src="images/current_city.png"
             alt="icon for current city"
             class="icon-img"
-          />
+          /> -->
           <h1 class="title city-title" id="current-city">KYIV</h1>
           <ul>
             <li class="temperature col" id="temperature">°C</li>
@@ -63,20 +76,6 @@
                   class="form-control btn btn-primary shadow-sm"
                 />
               </div>
-              <div class="col-auto">
-                <button
-                  type="submit"
-                  class="btn btn-outline-light mb-3"
-                  id="current-location-button"
-                >
-                  <img
-                    src="images/search_city.png"
-                    alt="search city"
-                    class="icon-img-search"
-                    
-                  />
-                </button>
-              </div>
             </form>
           </div>
         </div>
@@ -108,17 +107,12 @@
                   alt="icon for pressure"
                   class="center-icon-img"
                 />
-                <p id="pressure">hPa</p>
+                <p class="current-pressure" id="pressure">hPa</p>
               </span>
             </div>
           </div>
           <div class="center-weather-banner">
-            <img
-              src=""
-              class="banner-weather"
-              alt=""
-              id="icon-today"
-            />
+            <img src="" class="banner-weather" alt="" id="icon-today" />
           </div>
         </div>
         <div class="row next-day">
