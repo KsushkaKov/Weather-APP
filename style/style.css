@@ -4,7 +4,7 @@
 
 .weather-app {
   padding: 15px;
-  margin: 30px auto;
+  margin: 5px auto;
   max-width: 600px;
   border: 1px hidden;
   border-radius: 12px;
@@ -33,8 +33,8 @@
 }
 
 .icon-img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .icon-img-search {
@@ -45,6 +45,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 5px 40px;
+
 }
 
 .center-weather-list {
@@ -56,7 +57,7 @@
   flex-direction: row;
   justify-content: flex-start;
   gap: 15px;
-  
+
 }
 
 .banner-weather {
@@ -70,6 +71,7 @@
 
 .days-weather {
   padding: 20px 0;
+  margin: 0;
 }
 
 li {
@@ -93,9 +95,6 @@ div .units a {
   font-size: 12px;
 }
 
-.center-weather {
-  margin-bottom: 60px;
-}
 
 .next-day {
  padding: 0 30px;
@@ -106,11 +105,12 @@ div .units a {
 
 .next-day-weather {
   display: block;
-  width: 100%;
+  width: 30px;
+  margin-left: 20px;
 }
 
 .next-day-temperature {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .next-icon-img {
@@ -127,4 +127,9 @@ div .units a {
     rgb(130, 205, 221) 0%,
     rgb(255, 247, 153) 90%
   );
+
+}
+
+.forecast-day {
+  font-size: 22px;
 }
