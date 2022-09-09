@@ -1,3 +1,4 @@
+
 .header {
   padding: 5px 40px 20px;
 }
@@ -9,6 +10,7 @@
   border: 1px hidden;
   border-radius: 12px;
   box-shadow: 0 10px 10px 7px rgb(136 140 133 / 15%);
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 .current-day {
@@ -16,14 +18,12 @@
   flex-direction: row;
   justify-content: start;
   gap: 40px;
-  
- 
 }
 
 .current-city {
   display: flex;
   flex-direction: row;
-   margin: 40px 0 0 40px;
+  margin: 40px 0 0 40px;
 }
 
 .title {
@@ -41,8 +41,6 @@
 .icon-img-search {
   width: 25px;
 }
-
-
 
 .center-weather {
   display: grid;
@@ -111,7 +109,7 @@ div .units a {
 }
 
 .next-day-temperature {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .next-icon-img {
