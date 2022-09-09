@@ -22,7 +22,7 @@ if (hours < 10) {
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-clock.innerHTML = `${hours}:${minutes}`;
+clock.innerHTML = `Last updated: ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   let feels = Math.round(response.data.main.feels_like);
