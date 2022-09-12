@@ -22,14 +22,20 @@
 .current-city {
   display: flex;
   flex-direction: row;
-  margin: 40px 0 0 40px;
+  margin: 40px 0 0 26px;
 }
 
 .title {
   display: block;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 5px;
+  font-size: 30px;
+}
+
+li.feels, #feels {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .icon-img {
@@ -72,8 +78,8 @@ li {
   list-style: none;
 }
 
-.temperature {
-  font-size: 28px;
+#temperature {
+  font-size: 20px;
 }
 
 div .units a {
@@ -116,8 +122,8 @@ div .units a {
   height: 100%;
 }
 
-.open-source {
-  margin-left: 25%;
+div.open-source a{
+margin-left: 28%;
 }
 
 .rounded {

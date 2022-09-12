@@ -17,8 +17,6 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <!-- <div class="row header"> -->
-
         <div class="current-city">
           <div class="col-auto">
             <button
@@ -33,26 +31,12 @@
               />
             </button>
           </div>
-          <!-- <img
-            src="images/current_city.png"
-            alt="icon for current city"
-            class="icon-img"
-          /> -->
           <h1 class="title city-title" id="current-city">KYIV</h1>
           <ul>
             <li class="temperature col" id="temperature">°C</li>
-            <li>Feels like <span id="feels">°C</span></li>
+            <li class="feels">Feels like <span id="feels">°C</span></li>
           </ul>
         </div>
-
-        <!-- <div class="row">
-              <div class="temperature col" id="temperature">°C</div>
-              <div class="units col"></a>
-            <a href="#" id="farenheit-link">℉</a>
-            </div> 
-              <p>Feels like <span id="feels">°C</span></p>
-            </div> -->
-
         <div class="row header">
           <div class="col-auto search-form">
             <form class="row g-2" id="search-form">
@@ -79,7 +63,6 @@
             </form>
           </div>
         </div>
-
         <div class="center-weather">
           <div class="center-day">
             <h2 class="actual-day"></h2>
@@ -115,64 +98,7 @@
             <img src="" class="banner-weather" alt="" id="icon-today" />
           </div>
         </div>
-        <div id="forecast">
-        <!-- <div class="row next-day" >
-          <div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <div class="forecast-day">Tue</div>
-            <img
-              src="images/tue_weather.png"
-              alt="icon of tuesday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+24 ℃</span>
-            </div>
-          </div> -->
-          <!-- <div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <h2 class="forecast-day">Wed</h2>
-            <img
-              src="images/thr_weather.png"
-              alt="icon of wednesday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+22 ℃</span>
-            </div>
-          </div>
-          <div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <h2 class="forecast-day">Thu</h2>
-            <img
-              src="images/wed_weather.png"
-              alt="icon of thursday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+23 ℃</span>
-            </div>
-          </div>
-          <div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <h2 class="forecast-day">Fri</h2>
-            <img
-              src="images/fri_weather.png"
-              alt="icon of friday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+23 ℃</span>
-            </div>
-          </div>
-          <div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <h2 class="forecast-day">Sat</h2>
-            <img
-              src="images/sat_weather.png"
-              alt="icon of saturday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+18 ℃</span>
-            </div>
-          </div> -->
-        </div>
+        <div id="forecast"></div>
         </div>
       </div>
       <div class="open-source">
