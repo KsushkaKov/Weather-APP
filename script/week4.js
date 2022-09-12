@@ -1,7 +1,18 @@
 const now = new Date();
 const currentDay = document.querySelector(".actual-day");
+const clock = document.querySelector(".current-time");
 
-const days = [
+let minutes = now.getMinutes();
+let hours = now.getHours();
+
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+let days = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -10,24 +21,51 @@ const days = [
   "Friday",
   "Satuday",
 ];
-const day = days[now.getDay()];
+let day = days[now.getDay()];
+clock.innerHTML = `Last updated: ${hours}:${minutes}`;
 currentDay.innerHTML = `${day}`;
 
-const clock = document.querySelector(".current-time");
-let minutes = now.getMinutes();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row next-day">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML += `<div class="col shadow-sm mb-5 bg-body rounded">
+            <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
+            <img
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              alt="icon of tuesday weather"
+              class="next-day-weather"
+            />
+            <div class="days-weather">
+              <span class="next-day-temperature-max">${Math.round(
+                forecastDay.temp.max
+              )}℃</span>
+              <span class="next-day-temperature-min">${Math.round(
+                forecastDay.temp.min
+              )}℃</span>
+            </div>
+          </div>`;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
-clock.innerHTML = `Last updated: ${hours}:${minutes}`;
 
 function getForecast(coordinates) {
- let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
- let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -52,34 +90,9 @@ function displayWeatherCondition(response) {
     "alt",
     `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
-  
+
   getForecast(response.data.coord);
 }
-
-function displayForecast() {
-    let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row next-day">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col shadow-sm p-3 mb-5 bg-body rounded">
-            <div class="forecast-day">${day}</div>
-            <img
-              src="images/tue_weather.png"
-              alt="icon of tuesday weather"
-              class="next-day-weather"
-            />
-            <div class="days-weather">
-              <span class="next-day-temperature">+24 ℃</span>
-            </div>
-          </div>`;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-displayForecast();
-
 
 function searchCity(city) {
   let apiKey = "6e9697292d87e7ccc444c909587e4383";
@@ -93,6 +106,8 @@ function handleSubmit(event) {
   let city = document.querySelector("#input-city").value;
   searchCity(city);
 }
+
+// displayForecast();
 
 function searchLocation(position) {
   let apiKey = "6e9697292d87e7ccc444c909587e4383";
@@ -113,7 +128,6 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Kyiv");
-
 
 // function searchCity(event) {
 //     event.preventDefault();

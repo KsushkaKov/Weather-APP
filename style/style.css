@@ -67,10 +67,6 @@
   height: 20px;
 }
 
-.days-weather {
-  padding: 20px 0;
-  margin: 0;
-}
 
 li {
   list-style: none;
@@ -102,12 +98,18 @@ div .units a {
 
 .next-day-weather {
   display: block;
-  width: 30px;
-  margin-left: 20px;
+  width: 46px;
+  margin: 0 auto;
 }
 
-.next-day-temperature {
+.next-day-temperature-max {
   font-size: 14px;
+}
+
+.next-day-temperature-min {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .next-icon-img {
